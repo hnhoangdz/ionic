@@ -21,7 +21,8 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
-
+import TripDetail from './pages/TripDetail';
+import AllTrips from './pages/AllTrips';
 setupIonicReact();
 
 const App: React.FC = () => (
@@ -33,6 +34,12 @@ const App: React.FC = () => (
         </Route>
         <Route exact path="/">
           <Redirect to="/home" />
+        </Route>
+        <Route exact path="/TripDetail/:id">
+          <TripDetail />
+        </Route>
+        <Route exact path="/viewAllTrips">
+          <AllTrips />
         </Route>
       </IonRouterOutlet>
     </IonReactRouter>
